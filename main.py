@@ -23,7 +23,7 @@ PASSWORD = os.getenv("PASSWORD")
 
 def do_it():
     try:
-        requests.get("https://example.com")
+        requests.get(SSL_TEST_URL)
         print("Already logged in; Doing nothing.")
     except requests.exceptions.SSLError:
         # We have a problem, let's fix it!
